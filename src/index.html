@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Spark Brandingの制作実績サイトです" />
+    <title>Spark Branding</title>
+    <link rel="icon" href="images/favicon.png" />
+
+    <!---fonts-->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "ktt6fia",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+
+    <!---css-->
+    <link rel="stylesheet" href="vendors/css-reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="./output.css" rel="stylesheet" />
+
+    <!---js-->
+    <script
+      src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.25/bundled/lenis.min.js"
+      defer
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="font-base">
+    <div class="loading-wrap z-99">
+      <div class="text-wrap">
+        <span class="split">Spark&nbsp;Branding</span>
+      </div>
+      <div class="reveal-1"></div>
+      <div class="reveal-2"></div>
+    </div>
+    <header class="header flex justify-between items-center px-gutter-x py-8">
+      <div class="header_logo w-[120px] h-[47px]">
+        <h1>
+          <a href="index.html">
+            <img
+              src="./images/logo-black.png"
+              width="120"
+              height="47"
+              alt="Spark Branding Logo"
+            />
+          </a>
+        </h1>
+      </div>
+      <nav>
+        <ul class="flex space-x-12 tracking-widest">
+          <li>
+            <a class="hover:text-richgreen" href="works.html">WORKS</a>
+          </li>
+          <li><a class="hover:text-richgreen" href="flow.html">FLOW</a></li>
+          <li>
+            <a class="hover:text-richgreen" href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero h-[70vh] flex items-center justify-center">
+        <div class="hero-title text-center">
+          <h2
+            class="text-[max(6.25vw,2.25rem)] leading-[1.3] mb-6 tracking-wide font-bold font-ja"
+          >
+            企業の<span>“想い”</span>を<br />もっと分かりやすく<br />もっと伝える
+          </h2>
+          <p class="text-2xl tracking-widest">
+            Make it Clear. Make it Powerful.
+          </p>
+        </div>
+      </section>
+
+      <section class="slider">
+        <div class="slider-top overflow-hidden relative h-[414px] w-full mb-1">
+          <img
+            src="./images/slider-top.jpg"
+            width="2360"
+            height="300"
+            alt="制作実績のスライダー画像"
+            class="absolute right-0 top-0 animate-slide"
+          />
+        </div>
+        <div class="slider-bottom overflow-hidden relative h-[414px] w-full">
+          <img
+            src="./images/slider-bottom.jpg"
+            width="2360"
+            height="300"
+            alt="制作実績のスライダー画像"
+            class="absolute right-0 top-0 animate-slide reverse"
+          />
+        </div>
+      </section>
+
+      <section class="concept px-gutter-x">
+        <div class="concept-txt my-gutter-2y flex justify-between">
+          <h2 class="text-2xl tracking-wide">Concept</h2>
+          <p
+            class="max-w-[48rem] font-bold leading-14 text-2xl tracking-widest"
+          >
+            私たちは、採用に特化したブランディングツールを制作し、企業と求職者を繋ぐ新たな価値を創造します。企業の個性や強みを最大限に引き出し、共感を呼び起こすデザインとストーリーを通じて、求職者に響くメッセージを届けます。
+          </p>
+        </div>
+        <div class="concept-img px-gutter-x py-gutter-y flex justify-between">
+          <div class="relative w-[32vw] aspect-4/3">
+            <figure data-parallax-front data-y="50px" data-delay="1">
+              <img
+                src="./images/concept-1.jpg"
+                alt="制作の画像"
+                width="400"
+                height="300"
+              />
+            </figure>
+            <div
+              class="absolute bottom-[25%] left-[80%] w-[15vw] aspect-square"
+            >
+              <figure data-parallax-front data-y="300px" data-delay="1">
+                <img
+                  src="./images/concept-2.jpg"
+                  width="190"
+                  height="190"
+                  alt="スマホの画像"
+                />
+              </figure>
+            </div>
+          </div>
+          <div class="w-[23vw]">
+            <figure data-parallax-front data-y="200px" data-delay="3">
+              <img
+                src="./images/concept-3.jpg"
+                width="300"
+                height="400"
+                alt="カメラの画像"
+                class="mt-50"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <div class="concept-animation py-gutter-y text-center overflow-hidden">
+        <p class="text-[max(10vw,5rem)] animation-left">Make it Clear.</p>
+        <p class="text-[max(10vw,5rem)] animation-right">Make it Powerful.</p>
+      </div>
+
+      <section class="works py-gutter-2y px-gutter-x overflow-hidden">
+        <h2 class="text-white text-2xl mb-6">Works</h2>
+        <p class="text-white text-2xl mb-gutter-y">
+          幅広い制作で企業の採用ブランディングをご支援いたします。
+        </p>
+        <div class="card02 l-section px-gutter-x">
+          <div class="l-inner">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <a href="#" class="swiper-slide">
+                  <article
+                    class="slide hover:-translate-y-4 transition-transform"
+                  >
+                    <div class="slide-media img-cover mb-6">
+                      <img
+                        src="./images/works.jpg"
+                        width="400"
+                        height="300"
+                        alt="制作実績1"
+                      />
+                    </div>
+                    <div class="slide-content">
+                      <h3 class="text-white text-2xl mb-2">
+                        高校生採用パンフレット
+                      </h3>
+                      <span
+                        class="text-xs gradation bg-clip-text text-transparent inline-block border-green border p-2 rounded-md mr-2"
+                      >
+                        パンフレット
+                      </span>
+                      <span class="text-white">サイデン化学 株式会社</span>
+                    </div>
+                  </article>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <article
+                    class="slide hover:-translate-y-4 transition-transform"
+                  >
+                    <div class="slide-media img-cover mb-6">
+                      <img
+                        src="./images/works.jpg"
+                        width="400"
+                        height="300"
+                        alt="制作実績1"
+                      />
+                    </div>
+                    <div class="slide-content">
+                      <h3 class="text-white text-2xl mb-2">
+                        高校生採用パンフレット
+                      </h3>
+                      <span
+                        class="text-xs gradation bg-clip-text text-transparent inline-block border-green border p-2 rounded-md mr-2"
+                      >
+                        パンフレット
+                      </span>
+                      <span class="text-white">サイデン化学 株式会社</span>
+                    </div>
+                  </article>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <article
+                    class="slide hover:-translate-y-4 transition-transform"
+                  >
+                    <div class="slide-media img-cover mb-6">
+                      <img
+                        src="./images/works.jpg"
+                        width="400"
+                        height="300"
+                        alt="制作実績1"
+                      />
+                    </div>
+                    <div class="slide-content">
+                      <h3 class="text-white text-2xl mb-2">
+                        高校生採用パンフレット
+                      </h3>
+                      <span
+                        class="text-xs gradation bg-clip-text text-transparent inline-block border-green border p-2 rounded-md mr-2"
+                      >
+                        パンフレット
+                      </span>
+                      <span class="text-white">サイデン化学 株式会社</span>
+                    </div>
+                  </article>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <article
+                    class="slide hover:-translate-y-4 transition-transform"
+                  >
+                    <div class="slide-media img-cover mb-6">
+                      <img
+                        src="./images/works.jpg"
+                        width="400"
+                        height="300"
+                        alt="制作実績1"
+                      />
+                    </div>
+                    <div class="slide-content">
+                      <h3 class="text-white text-2xl mb-2">
+                        高校生採用パンフレット
+                      </h3>
+                      <span
+                        class="text-xs gradation bg-clip-text text-transparent inline-block border-green border p-2 rounded-md mr-2"
+                      >
+                        パンフレット
+                      </span>
+                      <span class="text-white">サイデン化学 株式会社</span>
+                    </div>
+                  </article>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <article
+                    class="slide hover:-translate-y-4 transition-transform"
+                  >
+                    <div class="slide-media img-cover mb-6">
+                      <img
+                        src="./images/works.jpg"
+                        width="400"
+                        height="300"
+                        alt="制作実績1"
+                      />
+                    </div>
+                    <div class="slide-content">
+                      <h3 class="text-white text-2xl mb-2">
+                        高校生採用パンフレット
+                      </h3>
+                      <span
+                        class="text-xs gradation bg-clip-text text-transparent inline-block border-green border p-2 rounded-md mr-2"
+                      >
+                        パンフレット
+                      </span>
+                      <span class="text-white">サイデン化学 株式会社</span>
+                    </div>
+                  </article>
+                </a>
+              </div>
+              <!-- /swiper-wrapper -->
+
+              <div class="swiper-controller">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+            <!-- /swiper -->
+          </div>
+        </div>
+      </section>
+      <section class="contact relative">
+        <div class="shapes">
+          <div class="shape shape1"></div>
+          <div class="shape shape2"></div>
+          <div class="shape shape3"></div>
+        </div>
+        <div
+          class="contact-content text-center h-[100vh] w-full flex flex-col justify-center items-center bg-white absolute top-0 left-0 mix-blend-screen"
+        >
+          <a href="#" class="text-[max(14.3vw,3.5rem)] select-none"
+            >GET IN TOUCH</a
+          >
+          <p class="text-2xl select-none">
+            採用に関する制作・ご相談はお気軽にお問い合わせください
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4 bg-body">
+      <div class="footer-inner flex justify-between px-gutter-x">
+        <span class="text-white"> ©2025 Spark.inc </span>
+        <ul class="footer-icon flex items-center space-x-4">
+          <li class="w-[20px] h-[20px] flex items-center hover:opacity-70">
+            <a href="#">
+              <img
+                src="images/youtube.png"
+                alt="youtubeアイコン"
+                width="20"
+                height="20"
+              />
+            </a>
+          </li>
+          <li class="w-[16px] h-[16px] hover:opacity-70">
+            <a href="#">
+              <img
+                src="images/note.png"
+                alt="noteアイコン"
+                width="16"
+                height="16"
+              />
+            </a>
+          </li>
+          <li class="w-[16px] h-[16px] hover:opacity-70">
+            <a href="#">
+              <img
+                src="images/note.png"
+                alt="noteアイコン"
+                width="16"
+                height="16"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

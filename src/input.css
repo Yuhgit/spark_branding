@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+@theme {
+  --font-base: futura-pt, dnp-shuei-gothic-kin-std, sans-serif;
+  --font-ja: dnp-shuei-gothic-kin-std, sans-serif;
+  --color-body: #1f1f1f;
+  --color-green: #7bc8c1;
+  --color-richgreen: #6cba50;
+  --spacing-gutter-x: max(6.25vw, 1.5rem);
+  --spacing-gutter-2y: max(10.6vw, 5rem);
+  --spacing-gutter-y: max(5.3vw, 3rem);
+}
+
+.loading-wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+}
+.text-wrap {
+  overflow: hidden;
+}
+.loading-wrap .text-wrap .split {
+  display: block;
+  font-size: 40px;
+  color: #fff;
+  position: relative;
+  z-index: 20;
+}
+.text-wrap .split span {
+  display: inline-block;
+}
+.reveal-1,
+.reveal-2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.reveal-1 {
+  background-color: var(--color-body);
+  z-index: 30;
+}
+.reveal-2 {
+  background-color: var(--color-body);
+  z-index: 10;
+}
+
+/* 文字グラデーション */
+.hero-title span {
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    45deg,
+    #7bc8c1 25%,
+    #6cba50 50%,
+    #008150 75%
+  );
+  background-size: 200%;
+  animation: gradation 5s infinite linear;
+}
+@keyframes gradation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* 文字アニメーション */
+@keyframes slide {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: calc(100% - 3200px);
+  }
+}
+.animate-slide {
+  animation: slide 30s linear infinite;
+  min-width: 3200px;
+}
+.reverse {
+  animation-direction: reverse;
+}
+img {
+  @apply w-full h-auto object-cover;
+}
+.concept-animation {
+  transition: all 0.5s;
+  &.is-active {
+    color: #fff;
+    background: var(--color-body);
+  }
+}
+.concept,
+.works {
+  transition: all 0.5s;
+  &.is-active {
+    background: var(--color-body);
+  }
+}
+
+/* swiper */
+.card02 {
+  .swiper-slide {
+    width: 33vw;
+  }
+}
+.card02 {
+  .swiper {
+    overflow: visible;
+  }
+}
+.card02 {
+  .swiper-controller {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 3.2rem;
+  }
+  .swiper-pagination {
+    margin-right: auto;
+  }
+}
+.gradation {
+  background-image: linear-gradient(180deg, #6cba50 0%, #7bc8c1 100%);
+}
+.card02 .swiper-pagination-bullet {
+  width: 1.6rem;
+  height: 3px;
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  vertical-align: top;
+  background-color: white;
+  border-radius: 0px;
+}
+.card02 .swiper-pagination-bullet-active {
+  width: 4rem;
+  background-color: #7bc8c1;
+}
+.swiper-pagination {
+  text-align: left;
+}
+.swiper-controller {
+  margin-top: 6rem !important;
+  gap: 2.6rem !important;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  display: grid;
+  place-content: center;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+.card02 .swiper-button-prev,
+.card02 .swiper-button-next {
+  position: relative;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: 0;
+}
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  border-radius: 50%;
+  background-color: #fff;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  width: 0.6rem;
+  height: 0.6rem;
+  content: "";
+  border: solid 1px var(--color-body);
+  border-width: 3px 3px 0 0;
+}
+.swiper-button-next::after {
+  margin-right: 0.2rem;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.swiper-button-prev::after {
+  margin-left: 0.2rem;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+/* get in touch */
+.shapes {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.shape1 {
+  background-color: #008150;
+  width: 440px;
+  height: 440px;
+  margin: -220px 0 0 -220px;
+}
+.shape2 {
+  background-color: #6cba50;
+  width: 300px;
+  height: 300px;
+  margin: -150px 0 0 -150px;
+}
+.shape3 {
+  background-color: #7bc8c1;
+  width: 160px;
+  height: 160px;
+  margin: -80px 0 0 -80px;
+}
