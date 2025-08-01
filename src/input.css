@@ -11,6 +11,7 @@
   --spacing-gutter-y: max(5.3vw, 3rem);
 }
 
+/* loading */
 .loading-wrap {
   width: 100%;
   height: 100vh;
@@ -50,6 +51,152 @@
   z-index: 10;
 }
 
+/* hamburger */
+.btn-trigger {
+  position: relative;
+  width: 36px;
+  height: 26px;
+  cursor: pointer;
+}
+.btn-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1.6px;
+  background-color: var(--color-body);
+  border-radius: 2px;
+}
+.btn-trigger,
+.btn-trigger span {
+  display: inline-block;
+  transition: all 0.5s;
+  box-sizing: border-box;
+}
+.btn-trigger span:nth-of-type(1) {
+  top: 0;
+}
+.btn-trigger span:nth-of-type(2) {
+  top: 12px;
+}
+.btn-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+#ham-btn span:nth-of-type(1) {
+  -webkit-animation: btn07-bar01 0.75s forwards;
+  animation: btn07-bar01 0.75s forwards;
+}
+@-webkit-keyframes btn07-bar01 {
+  0% {
+    -webkit-transform: translateY(12px) rotate(45deg);
+  }
+  50% {
+    -webkit-transform: translateY(12px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0);
+  }
+}
+@keyframes btn07-bar01 {
+  0% {
+    transform: translateY(12px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(12px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+#ham-btn span:nth-of-type(2) {
+  transition: all 0.25s 0.25s;
+  opacity: 1;
+}
+#ham-btn span:nth-of-type(3) {
+  -webkit-animation: btn07-bar03 0.75s forwards;
+  animation: btn07-bar03 0.75s forwards;
+}
+@-webkit-keyframes btn07-bar03 {
+  0% {
+    -webkit-transform: translateY(-12px) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: translateY(-12px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0);
+  }
+}
+@keyframes btn07-bar03 {
+  0% {
+    transform: translateY(-12px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+#ham-btn.active span:nth-of-type(1) {
+  -webkit-animation: active-btn07-bar01 0.75s forwards;
+  animation: active-btn07-bar01 0.75s forwards;
+}
+@-webkit-keyframes active-btn07-bar01 {
+  0% {
+    -webkit-transform: translateY(0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translateY(12px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(12px) rotate(45deg);
+  }
+}
+@keyframes active-btn07-bar01 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(12px) rotate(0);
+  }
+  100% {
+    transform: translateY(12px) rotate(45deg);
+  }
+}
+#ham-btn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+#ham-btn.active span:nth-of-type(3) {
+  -webkit-animation: active-btn07-bar03 0.75s forwards;
+  animation: active-btn07-bar03 0.75s forwards;
+}
+@-webkit-keyframes active-btn07-bar03 {
+  0% {
+    -webkit-transform: translateY(0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translateY(-12px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(-12px) rotate(-45deg);
+  }
+}
+@keyframes active-btn07-bar03 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0);
+  }
+  100% {
+    transform: translateY(-12px) rotate(-45deg);
+  }
+}
+.sp-nav.active {
+  top: 63px;
+}
+
 /* 文字グラデーション */
 .hero-title span {
   display: inline-block;
@@ -83,12 +230,25 @@
     right: 0;
   }
   100% {
-    right: calc(100% - 3200px);
+    right: calc(100% - 1600px);
+  }
+}
+@media (min-width: 768px) {
+  @keyframes slide {
+    0% {
+      right: 0;
+    }
+    100% {
+      right: calc(100% - 3200px);
+    }
   }
 }
 .animate-slide {
   animation: slide 30s linear infinite;
-  min-width: 3200px;
+  min-width: 1600px;
+  @media (min-width: 768px) {
+    min-width: 3200px;
+  }
 }
 .reverse {
   animation-direction: reverse;
@@ -114,7 +274,10 @@ img {
 /* swiper */
 .card02 {
   .swiper-slide {
-    width: 33vw;
+    width: 70vw;
+    @media (min-width: 768px) {
+      width: 33vw;
+    }
   }
 }
 .card02 {
@@ -125,10 +288,13 @@ img {
 .card02 {
   .swiper-controller {
     display: flex;
-    gap: 1.6rem;
+    gap: 2.6rem;
     align-items: center;
     justify-content: flex-end;
-    margin-top: 3.2rem;
+    margin-top: 3rem;
+    @media (min-width: 768px) {
+      margin-top: 6rem;
+    }
   }
   .swiper-pagination {
     margin-right: auto;
@@ -138,7 +304,7 @@ img {
   background-image: linear-gradient(180deg, #6cba50 0%, #7bc8c1 100%);
 }
 .card02 .swiper-pagination-bullet {
-  width: 1.6rem;
+  width: 1rem;
   height: 3px;
   cursor: pointer;
   -webkit-transition: var(--transition);
@@ -146,25 +312,38 @@ img {
   vertical-align: top;
   background-color: white;
   border-radius: 0px;
+  @media (min-width: 768px) {
+    width: 1.6rem;
+  }
 }
 .card02 .swiper-pagination-bullet-active {
-  width: 4rem;
+  width: 2rem;
   background-color: #7bc8c1;
+  width: 1.6rem;
+  @media (min-width: 768px) {
+    width: 4rem;
+  }
 }
 .swiper-pagination {
   text-align: left;
+  bottom: 0 !important;
+  @media (min-width: 768px) {
+    bottom: auto !important;
+  }
 }
-.swiper-controller {
-  margin-top: 6rem !important;
-  gap: 2.6rem !important;
-}
+
 .swiper-button-prev,
 .swiper-button-next {
   display: grid;
   place-content: center;
-  width: 3rem;
-  height: 3rem;
+  width: 2.4rem;
+  height: 2.4rem;
   cursor: pointer;
+  margin-top: 6rem;
+  @media (min-width: 768px) {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 .card02 .swiper-button-prev,
 .card02 .swiper-button-next {
@@ -207,9 +386,12 @@ img {
 /* get in touch */
 .shapes {
   position: relative;
-  height: 100vh;
+  height: 40vh;
   width: 100vw;
   overflow: hidden;
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
 }
 
 .shape {

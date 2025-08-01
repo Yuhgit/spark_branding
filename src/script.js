@@ -37,6 +37,7 @@ window.addEventListener("load", (e) => {
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
+  // オープニングアニメーション
   const header = document.querySelector(".header");
   const title = document.querySelector(".hero-title h2");
   const txt = document.querySelector(".hero-title p");
@@ -98,6 +99,14 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
+
+  // ハンバーガーメニュー
+  const btnTrigger = document.querySelector(".btn-trigger");
+  const nav = document.querySelector(".sp-nav");
+  btnTrigger.addEventListener("click", () => {
+    btnTrigger.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
 
   //画像アニメーション
   const items = document.querySelectorAll("[data-parallax-front]"); // data-parallax-front属性を持つ要素を取得
