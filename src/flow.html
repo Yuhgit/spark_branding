@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Spark Brandingの制作実績サイトです" />
+    <title>Spark Branding</title>
+    <link rel="icon" href="images/favicon.png" />
+
+    <!---fonts-->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "ktt6fia",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+
+    <!---css-->
+    <link rel="stylesheet" href="vendors/css-reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="./output.css" rel="stylesheet" />
+
+    <!---js-->
+    <script
+      src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.25/bundled/lenis.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+      defer
+    ></script>
+    <script src="./script/common.js" defer></script>
+    <script src="./script/tab.js" defer></script>
+  </head>
+  <body class="font-base">
+    <header
+      class="header flex justify-between items-center px-gutter-x py-4 z-90 fixed w-full bg-white md:py-8 md:static"
+    >
+      <div class="header_logo w-[120px] h-[47px]">
+        <h1>
+          <a href="index.html">
+            <img
+              src="./images/logo-black.png"
+              width="120"
+              height="47"
+              alt="Spark Branding Logo"
+              class="-ml-2"
+            />
+          </a>
+        </h1>
+      </div>
+      <nav class="hidden md:block">
+        <ul class="flex space-x-12 tracking-widest">
+          <li>
+            <a class="hover:text-richgreen" href="works.html">WORKS</a>
+          </li>
+          <li><a class="hover:text-richgreen" href="flow.html">FLOW</a></li>
+          <li>
+            <a class="hover:text-richgreen" href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="sp-ham md:hidden">
+        <div id="ham-btn" class="btn-trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <nav
+        class="sp-nav transition-all duration-300 ease-in-out absolute bg-white p-12 top-[-400px] -z-10 right-0 md:opacity-100"
+      >
+        <ul class="flex flex-col space-x-12 tracking-widest">
+          <li>
+            <a class="hover:text-richgreen block mb-6" href="works.html"
+              >WORKS</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-richgreen block mb-6" href="flow.html">FLOW</a>
+          </li>
+          <li>
+            <a class="hover:text-richgreen block mb-6" href="contact.html"
+              >CONTACT</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="hero pt-40 pb-20 text-center px-gutter-x md:pt-40 md:pb-30"
+      >
+        <h2 class="text-[clamp(4rem,10vw,8rem)] leading-none tracking-wide">
+          FLOW
+        </h2>
+        <p class="text-[clamp(1rem,1.8vw,1.5rem)] tracking-widest">
+          制作の流れ
+        </p>
+      </section>
+
+      <section
+        class="works-category flex justify-center mb-gutter-2y px-gutter-x"
+      >
+        <ul class="flex gap-2 text-sm flex-wrap justify-center" id="tab-menu">
+          <li
+            class="py-2 px-4 border border-body rounded-md hover:border-richgreen cursor-pointer"
+            data-tab="movie"
+          >
+            動画制作
+          </li>
+          <li
+            class="py-2 px-4 border border-body rounded-md hover:border-richgreen cursor-pointer"
+            data-tab="web"
+          >
+            Webサイト制作
+          </li>
+          <li
+            class="py-2 px-4 border border-body rounded-md hover:border-richgreen cursor-pointer"
+            data-tab="pamphlet"
+          >
+            パンフレット制作
+          </li>
+          <li
+            class="py-2 px-4 border border-body rounded-md hover:border-richgreen cursor-pointer"
+            data-tab="sns"
+          >
+            SNS運用
+          </li>
+        </ul>
+      </section>
+
+      <section class="px-gutter-x tab-content" id="tab-movie">
+        <div class="text-center mb-gutter-y w-[min(80vw,62.5rem)] mx-auto">
+          <h3 class="text-2xl font-bold mb-6">動画制作</h3>
+          <p>
+            企画〜撮影〜編集、チャンネル運用・データ分析まで<br
+              class="hidden md:block"
+            />
+            一気通貫のトータルサービスを行います。
+          </p>
+        </div>
+        <div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg mb-16 relative after:content-[''] after:border-8 after:border-solid after:border-transparent after:border-t-richgreen after:border-t-9 after:absolute after:-bottom-12 after:left-[50%] flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />01
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">ヒアリング</h4>
+              <p>
+                お客さまのご要望を確認し、どのような動画にしたいか等ヒアリングします。
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg mb-16 relative after:content-[''] after:border-8 after:border-solid after:border-transparent after:border-t-richgreen after:border-t-9 after:absolute after:-bottom-12 after:left-[50%] flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />02
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">コンテンツ検討</h4>
+              <p>
+                動画市場におけるトレンドや流行も加味して、御社のブランドイメージと最適な組み合わせを提案します。
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg mb-16 relative after:content-[''] after:border-8 after:border-solid after:border-transparent after:border-t-richgreen after:border-t-9 after:absolute after:-bottom-12 after:left-[50%] flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />03
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">撮影</h4>
+              <p>
+                複数名の撮影クルーで現場ごとの良さを最大限有効活用しながら、企画案と近いイメージで撮影します。
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg mb-16 relative after:content-[''] after:border-8 after:border-solid after:border-transparent after:border-t-richgreen after:border-t-9 after:absolute after:-bottom-12 after:left-[50%] flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />04
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">編集</h4>
+              <p>
+                撮影スタッフがそのまま編集に入り、映像の構成や素材の色補正など細部までこだわり編集します。
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg relative flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />05
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">公開・運用</h4>
+              <p>
+                YouTubeなどのサイトへのアップロード、データ分析、レポーティングなど運用のご支援をします。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-gutter-x tab-content hidden" id="tab-web">
+        <div class="text-center mb-gutter-y w-[min(80vw,62.5rem)] mx-auto">
+          <h3 class="text-2xl font-bold mb-6">Webサイト制作</h3>
+          <p>
+            コーポレートサイトや採用サイトにおけるすべての企画・制作を一貫して行います。<br
+              class="hidden md:block"
+            />
+            Webのことが分からない、HP公開まで何をすればよいか分からないという方もご安心ください。
+            また、制作だけでなくアフターフォローもお任せください。
+          </p>
+        </div>
+        <div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg mb-16 relative after:content-[''] after:border-8 after:border-solid after:border-transparent after:border-t-richgreen after:border-t-9 after:absolute after:-bottom-12 after:left-[50%] flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />01
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">ヒアリング</h4>
+              <p>
+                お客さまのご要望を確認し、どのようなサイトにしたいかなどをヒアリングします。
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg mb-16 relative after:content-[''] after:border-8 after:border-solid after:border-transparent after:border-t-richgreen after:border-t-9 after:absolute after:-bottom-12 after:left-[50%] flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />02
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">サイト設計</h4>
+              <p>
+                ヒアリングした内容をもとに、サイトに掲載すべき情報を整理しサイトマップやフレームの作成を行います。
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg mb-16 relative after:content-[''] after:border-8 after:border-solid after:border-transparent after:border-t-richgreen after:border-t-9 after:absolute after:-bottom-12 after:left-[50%] flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />03
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">デザイン制作</h4>
+              <p>
+                ご希望の雰囲気やイメージを確認し、ブランディングにつながるオリジナルのデザインを作成いたします。
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg mb-16 relative after:content-[''] after:border-8 after:border-solid after:border-transparent after:border-t-richgreen after:border-t-9 after:absolute after:-bottom-12 after:left-[50%] flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />04
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">コーディング・構築</h4>
+              <p>
+                確定したデザインをWeb上に表現するために、サイトの構築を行います。
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg relative flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />05
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">公開・運用</h4>
+              <p>
+                Webサーバーにデータをアップロードして、サイトを公開いたします。ご希望であれば、サイトの運用・保守も承ります。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-gutter-x tab-content hidden" id="tab-pamphlet">
+        <div class="text-center mb-gutter-y w-[min(80vw,62.5rem)] mx-auto">
+          <h3 class="text-2xl font-bold mb-6">パンフレット制作</h3>
+          <p>
+            採用ターゲットに刺さるオリジナルデザインのパンフレットを制作いたします。<br
+              class="hidden md:block"
+            />
+            また、ロゴ・名刺・ポスター・採用資料の作成等すべてにおいて一貫したデザインで、
+            コーポレートブランドを意識した様々なブランディングツールを制作しています。
+          </p>
+        </div>
+        <div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg mb-16 relative after:content-[''] after:border-8 after:border-solid after:border-transparent after:border-t-richgreen after:border-t-9 after:absolute after:-bottom-12 after:left-[50%] flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />01
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">ヒアリング</h4>
+              <p>
+                お客さまのご要望を確認し、どのようなパンフレットにしたいかなどをヒアリングします。
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg mb-16 relative after:content-[''] after:border-8 after:border-solid after:border-transparent after:border-t-richgreen after:border-t-9 after:absolute after:-bottom-12 after:left-[50%] flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />02
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">フレーム・構成作成</h4>
+              <p>
+                ヒアリングした内容をもとに、パンフレットに掲載すべき情報を整理しフレームの作成を行います。
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg mb-16 relative after:content-[''] after:border-8 after:border-solid after:border-transparent after:border-t-richgreen after:border-t-9 after:absolute after:-bottom-12 after:left-[50%] flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />03
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">デザイン制作</h4>
+              <p>
+                ご希望の雰囲気やイメージを確認し、ブランディングにつながるオリジナルのデザインを作成いたします。
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg relative flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />04
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">データ入稿・納品</h4>
+              <p>
+                確定したデザインデータを印刷会社さんへ入稿し、お客様指定の場所へお届けいたします。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-gutter-x tab-content hidden" id="tab-sns">
+        <div class="text-center mb-gutter-y w-[min(80vw,62.5rem)] mx-auto">
+          <h3 class="text-2xl font-bold mb-6">動SNSコンテンツ制作・運用</h3>
+          <p>
+            一気通貫のSNSコンテンツ制作および運用を行います。<br
+              class="hidden md:block"
+            />プロのデザイナーとムービークリエイターによる高品質なSNSコンテンツを提供いたします。
+          </p>
+        </div>
+        <div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg mb-16 relative after:content-[''] after:border-8 after:border-solid after:border-transparent after:border-t-richgreen after:border-t-9 after:absolute after:-bottom-12 after:left-[50%] flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />01
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">企画</h4>
+              <p>
+                市場動向や競合他社の事例リサーチ、御社の強みを分析して、採用時期に視聴者に刺さるコンテンツを検討いたします。
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg mb-16 relative after:content-[''] after:border-8 after:border-solid after:border-transparent after:border-t-richgreen after:border-t-9 after:absolute after:-bottom-12 after:left-[50%] flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />02
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">撮影</h4>
+              <p>
+                プロのカメラマンが御社の現場に赴き、企画案に沿った最適な画像や動画の撮影を実施します。
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg mb-16 relative after:content-[''] after:border-8 after:border-solid after:border-transparent after:border-t-richgreen after:border-t-9 after:absolute after:-bottom-12 after:left-[50%] flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />03
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">コンテンツ編集</h4>
+              <p>
+                同じ撮影者がそのまま編集に入るため、企画イメージ、撮影素材を最大限活かした編集が可能となります。
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg mb-16 relative after:content-[''] after:border-8 after:border-solid after:border-transparent after:border-t-richgreen after:border-t-9 after:absolute after:-bottom-12 after:left-[50%] flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />04
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">投稿・広告配信</h4>
+              <p>
+                弊社でアカウント開設～投稿素材の管理、アップロードまですべて承ります。また、採用時期に合わせた適切な広告配信を実施して、ターゲットに御社の魅力を直に伝えることが可能です。
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex mx-auto py-8 border-1 w-[min(80vw,62.5rem)] rounded-lg relative flex-col md:flex-row md:py-14"
+          >
+            <p
+              class="text-lg text-center px-8 flex items-center mb-3 md:px-20 md:text-2xl md:mb-0 md:border-r-[0.5px]"
+            >
+              STEP<br class="hidden md:block" />05
+            </p>
+            <div class="px-8 md:px-14">
+              <h4 class="text-2xl font-bold mb-3">データ分析</h4>
+              <p>
+                フォロワー数やいいね数を集計し、毎月データをまとめてレポーティングを実施します。より効果的な投稿は何か常にPDCAを回して改良を加えます。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact relative">
+        <div class="shapes">
+          <div class="shape shape1"></div>
+          <div class="shape shape2"></div>
+          <div class="shape shape3"></div>
+        </div>
+        <div
+          class="contact-content text-center h-[40vh] w-full flex flex-col justify-center items-center bg-white absolute top-0 left-0 mix-blend-screen md:h-[100vh]"
+        >
+          <a href="contact.html" class="text-[max(14.3vw,3.5rem)] select-none"
+            >GET IN TOUCH</a
+          >
+          <p class="text-base select-none md:text-2xl">
+            採用に関する制作・ご相談はお気軽にお問い合わせください
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4 bg-body">
+      <div class="footer-inner flex justify-between px-gutter-x">
+        <span class="text-white text-xs"> ©2025 Spark.inc </span>
+        <ul class="footer-icon flex items-center space-x-4">
+          <li class="w-[20px] h-[20px] flex items-center hover:opacity-70">
+            <a href="#">
+              <img
+                src="images/youtube.png"
+                alt="youtubeアイコン"
+                width="20"
+                height="20"
+              />
+            </a>
+          </li>
+          <li class="w-[16px] h-[16px] hover:opacity-70">
+            <a href="#">
+              <img
+                src="images/note.png"
+                alt="noteアイコン"
+                width="16"
+                height="16"
+              />
+            </a>
+          </li>
+          <li class="w-[16px] h-[16px] hover:opacity-70">
+            <a href="#">
+              <img
+                src="images/note.png"
+                alt="noteアイコン"
+                width="16"
+                height="16"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

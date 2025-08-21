@@ -120,140 +120,95 @@
         class="hero pt-40 pb-20 text-center px-gutter-x md:pt-40 md:pb-30"
       >
         <h2 class="text-[clamp(4rem,10vw,8rem)] leading-none tracking-wide">
-          WORKS
+          CONTACT
         </h2>
-        <p class="text-[clamp(1rem,1.8vw,1.5rem)] tracking-widest">制作実績</p>
+        <p class="text-[clamp(1rem,1.8vw,1.5rem)] tracking-widest">
+          お問い合わせ
+        </p>
       </section>
 
-      <section
-        class="works-category flex justify-center mb-gutter-2y px-gutter-x"
-      >
-        <ul class="flex gap-2 text-sm flex-wrap justify-center">
-          <a href="">
-            <li
-              class="py-2 px-4 border border-body rounded-md hover:border-richgreen"
-            >
-              すべて
-            </li>
-          </a>
-          <a href="">
-            <li
-              class="py-2 px-4 border border-body rounded-md hover:border-richgreen"
-            >
-              動画
-            </li>
-          </a>
-          <a href="">
-            <li
-              class="py-2 px-4 border border-body rounded-md hover:border-richgreen"
-            >
-              Webサイト
-            </li>
-          </a>
-          <a href="">
-            <li
-              class="py-2 px-4 border border-body rounded-md hover:border-richgreen"
-            >
-              パンフレット
-            </li>
-          </a>
-          <a href="">
-            <li
-              class="py-2 px-4 border border-body rounded-md hover:border-richgreen"
-            >
-              ブランディングツール
-            </li>
-          </a>
-          <a href="">
-            <li
-              class="py-2 px-4 border border-body rounded-md hover:border-richgreen"
-            >
-              SNS
-            </li>
-          </a>
-          <a href="">
-            <li
-              class="py-2 px-4 border border-body rounded-md hover:border-richgreen"
-            >
-              その他
-            </li>
-          </a>
-        </ul>
-      </section>
+      <section class="mb-gutter-2y">
+        <form>
+          <div class="mb-10">
+            <label for="company">企業名</label>
+            <input type="text" id="company" name="company" required />
+          </div>
 
-      <section class="works-items px-gutter-x">
-        <ul class="grid grid-cols-1 gap-10 md:grid-cols-2">
-          <a href="work.html">
-            <li class="works-item">
-              <img class="mb-4" src="./images/works.jpg" alt="" />
-              <span
-                class="category mb-2 border-1 border-richgreen rounded-md p-2 inline-block text-sm text-richgreen"
-                >パンフレット</span
-              >
-              <p class="mb-2">サイデン化学株式会社</p>
-              <p class="text-xl font-bold md:text-2xl">
-                高校生採用パンフレット
-              </p>
-            </li>
-          </a>
-          <a href="work.html">
-            <li class="works-item">
-              <img class="mb-4" src="./images/works.jpg" alt="" />
-              <span
-                class="category mb-2 border-1 border-richgreen rounded-md p-2 inline-block text-sm text-richgreen"
-                >パンフレット</span
-              >
-              <p class="mb-2">サイデン化学株式会社</p>
-              <p class="text-xl font-bold md:text-2xl">
-                高校生採用パンフレット
-              </p>
-            </li>
-          </a>
-          <a href="work.html">
-            <li class="works-item">
-              <img class="mb-4" src="./images/works.jpg" alt="" />
-              <span
-                class="category mb-2 border-1 border-richgreen rounded-md p-2 inline-block text-sm text-richgreen"
-                >パンフレット</span
-              >
-              <p class="mb-2">サイデン化学株式会社</p>
-              <p class="text-xl font-bold md:text-2xl">
-                高校生採用パンフレット
-              </p>
-            </li>
-          </a>
-          <a href="work.html">
-            <li class="works-item">
-              <img class="mb-4" src="./images/works.jpg" alt="" />
-              <span
-                class="category mb-2 border-1 border-richgreen rounded-md p-2 inline-block text-sm text-richgreen"
-                >パンフレット</span
-              >
-              <p class="mb-2">サイデン化学株式会社</p>
-              <p class="text-xl font-bold md:text-2xl">
-                高校生採用パンフレット
-              </p>
-            </li>
-          </a>
-        </ul>
-      </section>
+          <div class="mb-10">
+            <label for="name">お名前</label>
+            <input type="text" id="name" name="name" required />
+          </div>
 
-      <section class="contact relative">
-        <div class="shapes">
-          <div class="shape shape1"></div>
-          <div class="shape shape2"></div>
-          <div class="shape shape3"></div>
-        </div>
-        <div
-          class="contact-content text-center h-[40vh] w-full flex flex-col justify-center items-center bg-white absolute top-0 left-0 mix-blend-screen md:h-[100vh]"
-        >
-          <a href="contact.html" class="text-[max(14.3vw,3.5rem)] select-none"
-            >GET IN TOUCH</a
-          >
-          <p class="text-base select-none md:text-2xl">
-            採用に関する制作・ご相談はお気軽にお問い合わせください
-          </p>
-        </div>
+          <div class="mb-10">
+            <label for="tel">電話番号</label>
+            <input type="text" id="tel" name="tel" />
+          </div>
+
+          <div class="mb-10">
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="mb-10">
+            <label for="item">お問い合わせ項目</label>
+            <select name="item">
+              <option value="">選択してください</option>
+              <option value="動画制作について">動画制作について</option>
+              <option value="Webサイト制作について">
+                Webサイト制作について
+              </option>
+              <option value="パンフレット制作について">
+                パンフレット制作について
+              </option>
+              <option value="SNS運用について">SNS運用について</option>
+              <option value="その他の制作について">その他の制作について</option>
+              <option value="採用に関するご相談">採用に関するご相談</option>
+            </select>
+          </div>
+
+          <div class="mb-10">
+            <label for="message"
+              >弊社サービスをどこで お知りになりましたか？</label
+            >
+            <div class="box_br">
+              <label>
+                <input type="radio" name="gender" value="テキスト1" />
+                会社HP
+              </label>
+            </div>
+            <div class="box_br">
+              <label>
+                <input type="radio" name="gender" value="テキスト2" />
+                Web検索
+              </label>
+            </div>
+            <div class="box_br">
+              <label>
+                <input type="radio" name="gender" value="テキスト2" />
+                SNS
+              </label>
+            </div>
+            <div class="box_br">
+              <label>
+                <input type="radio" name="gender" value="テキスト2" />
+                広告
+              </label>
+            </div>
+            <div class="box_br">
+              <label>
+                <input type="radio" name="gender" value="テキスト2" />
+                求人媒体
+              </label>
+            </div>
+          </div>
+
+          <div class="mb-10">
+            <label for="message">お問い合わせ内容</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit">送信</button>
+        </form>
       </section>
     </main>
 

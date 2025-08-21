@@ -53,6 +53,10 @@
       src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.25/bundled/lenis.min.js"
       defer
     ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+      defer
+    ></script>
     <script src="./script/common.js" defer></script>
   </head>
   <body class="font-base">
@@ -112,52 +116,107 @@
     </header>
 
     <main>
-      <div class="hero pt-40 pb-20 text-center px-gutter-x md:pt-40 md:pb-30">
-        <h2 class="text-[clamp(2rem,4vw,4rem)] leading-none tracking-wide font-bold mb-6">高校生採用パンフレット</h2>
-        <p class="text-[clamp(1rem,1.8vw,1.5rem)] tracking-widest mb-4">サイデン化学株式会社</p>
-        <a href="#" class="mb-2 border-1 border-richgreen rounded-md p-2 inline-block text-sm text-richgreen">パンフレット</a>
-      </div>
+      <section
+        class="hero pt-40 pb-20 text-center px-gutter-x md:pt-45 md:pb-30"
+      >
+        <h2
+          class="text-[clamp(2rem,4vw,4rem)] leading-none tracking-wide font-bold mb-6"
+        >
+          高校生採用パンフレット
+        </h2>
+        <p class="text-[clamp(1rem,1.8vw,1.5rem)] tracking-widest mb-4">
+          サイデン化学株式会社
+        </p>
+        <a
+          href="#"
+          class="mb-2 border-1 border-richgreen rounded-md p-2 inline-block text-sm text-richgreen"
+          >パンフレット</a
+        >
+      </section>
 
-      <div class="px-gutter-x mb-gutter-2y">
+      <section class="px-gutter-x">
         <div class="works-img w-full">
-          <img src="./images/works.jpg" alt="">
+          <img src="./images/works.jpg" alt="" />
         </div>
-        <div class="works-details py-gutter-y">
-          <div class="works-detail py-gutter-y flex">
-            <h3>支援内容</h3>
-            <div class="w-[max(50.6vw,37.5rem)]">
-              <p>ダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになります</p>
+        <div class="works-details pt-gutter-y">
+          <div
+            class="works-detail py-gutter-y flex justify-between flex-col border-y-body border-y-[0.5px] md:flex-row"
+          >
+            <h3
+              class="text-2xl font-bold relative mb-4 before:content-[''] pl-8 before:w-7 before:h-1 before:bg-richgreen before:absolute before:top-3 before:left-0 before:-rotate-55 md:mb-0"
+            >
+              支援内容
+            </h3>
+            <div class="w-full md:w-[max(50.6vw,37.5rem)]">
+              <p class="leading-8">
+                ダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになります
+              </p>
             </div>
           </div>
-          <div class="works-detail">
-            <h3>課題・要望</h3>
-            <div>
-              <p>ダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになります</p>
+          <div
+            class="works-detail py-gutter-y flex justify-between flex-col border-y-body border-y-[0.5px] md:flex-row"
+          >
+            <h3
+              class="text-2xl font-bold relative mb-4 before:content-[''] pl-8 before:w-7 before:h-1 before:bg-richgreen before:absolute before:top-3 before:left-0 before:-rotate-55 md:mb-0"
+            >
+              課題・要望
+            </h3>
+            <div class="w-full md:w-[max(50.6vw,37.5rem)]">
+              <p class="leading-8 mb-6">
+                ダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになります
+              </p>
+              <img src="./images/works.jpg" alt="" />
             </div>
           </div>
-          <div class="works-detail">
-            <h3>課題解決のための施策</h3>
-            <div>
-              <p>ダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになります</p>
-              <img src="./images/works.jpg" alt="">
+          <div
+            class="works-detail py-gutter-y flex justify-between flex-col border-y-body border-y-[0.5px] md:flex-row"
+          >
+            <h3
+              class="text-2xl font-bold relative mb-4 before:content-[''] pl-8 before:w-7 before:h-1 before:bg-richgreen before:absolute before:top-3 before:left-0 before:-rotate-55 md:mb-0"
+            >
+              課題解決のための施策
+            </h3>
+            <div class="w-full md:w-[max(50.6vw,37.5rem)]">
+              <p class="leading-8 mb-6">
+                ダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになります
+              </p>
+              <img src="./images/works.jpg" alt="" />
             </div>
           </div>
-          <div class="works-detail">
-            <h3>施策の成果</h3>
-            <div>
-              <p>ダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになります</p>
-              <img src="./images/works.jpg" alt="">
-            </div>
-          </div>
-          <div class="works-detail">
-            <h3>支援内容</h3>
-            <div>
-              <p>ダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになります</p>
-              <img src="./images/works.jpg" alt="">
+          <div
+            class="works-detail py-gutter-y flex justify-between flex-col border-y-body border-y-[0.5px] md:flex-row"
+          >
+            <h3
+              class="text-2xl font-bold relative mb-4 before:content-[''] pl-8 before:w-7 before:h-1 before:bg-richgreen before:absolute before:top-3 before:left-0 before:-rotate-55 md:mb-0"
+            >
+              施策の成果
+            </h3>
+            <div class="w-full md:w-[max(50.6vw,37.5rem)]">
+              <p class="leading-8">
+                ダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになります
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section class="contact relative">
+        <div class="shapes">
+          <div class="shape shape1"></div>
+          <div class="shape shape2"></div>
+          <div class="shape shape3"></div>
+        </div>
+        <div
+          class="contact-content text-center h-[40vh] w-full flex flex-col justify-center items-center bg-white absolute top-0 left-0 mix-blend-screen md:h-[100vh]"
+        >
+          <a href="contact.html" class="text-[max(14.3vw,3.5rem)] select-none"
+            >GET IN TOUCH</a
+          >
+          <p class="text-base select-none md:text-2xl">
+            採用に関する制作・ご相談はお気軽にお問い合わせください
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer class="py-4 bg-body">
