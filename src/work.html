@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Spark Brandingの制作実績サイトです" />
+    <title>Spark Branding</title>
+    <link rel="icon" href="images/favicon.png" />
+
+    <!---fonts-->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "ktt6fia",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+
+    <!---css-->
+    <link rel="stylesheet" href="vendors/css-reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="./output.css" rel="stylesheet" />
+
+    <!---js-->
+    <script
+      src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.25/bundled/lenis.min.js"
+      defer
+    ></script>
+    <script src="./script/common.js" defer></script>
+  </head>
+  <body class="font-base">
+    <header
+      class="header flex justify-between items-center px-gutter-x py-4 z-90 fixed w-full bg-white md:py-8 md:static"
+    >
+      <div class="header_logo w-[120px] h-[47px]">
+        <h1>
+          <a href="index.html">
+            <img
+              src="./images/logo-black.png"
+              width="120"
+              height="47"
+              alt="Spark Branding Logo"
+              class="-ml-2"
+            />
+          </a>
+        </h1>
+      </div>
+      <nav class="hidden md:block">
+        <ul class="flex space-x-12 tracking-widest">
+          <li>
+            <a class="hover:text-richgreen" href="works.html">WORKS</a>
+          </li>
+          <li><a class="hover:text-richgreen" href="flow.html">FLOW</a></li>
+          <li>
+            <a class="hover:text-richgreen" href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="sp-ham md:hidden">
+        <div id="ham-btn" class="btn-trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <nav
+        class="sp-nav transition-all duration-300 ease-in-out absolute bg-white p-12 top-[-400px] -z-10 right-0 md:opacity-100"
+      >
+        <ul class="flex flex-col space-x-12 tracking-widest">
+          <li>
+            <a class="hover:text-richgreen block mb-6" href="works.html"
+              >WORKS</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-richgreen block mb-6" href="flow.html">FLOW</a>
+          </li>
+          <li>
+            <a class="hover:text-richgreen block mb-6" href="contact.html"
+              >CONTACT</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero pt-40 pb-20 text-center px-gutter-x md:pt-40 md:pb-30">
+        <h2 class="text-[clamp(2rem,4vw,4rem)] leading-none tracking-wide font-bold mb-6">高校生採用パンフレット</h2>
+        <p class="text-[clamp(1rem,1.8vw,1.5rem)] tracking-widest mb-4">サイデン化学株式会社</p>
+        <a href="#" class="mb-2 border-1 border-richgreen rounded-md p-2 inline-block text-sm text-richgreen">パンフレット</a>
+      </div>
+
+      <div class="px-gutter-x mb-gutter-2y">
+        <div class="works-img w-full">
+          <img src="./images/works.jpg" alt="">
+        </div>
+        <div class="works-details py-gutter-y">
+          <div class="works-detail py-gutter-y flex">
+            <h3>支援内容</h3>
+            <div class="w-[max(50.6vw,37.5rem)]">
+              <p>ダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになります</p>
+            </div>
+          </div>
+          <div class="works-detail">
+            <h3>課題・要望</h3>
+            <div>
+              <p>ダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになります</p>
+            </div>
+          </div>
+          <div class="works-detail">
+            <h3>課題解決のための施策</h3>
+            <div>
+              <p>ダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになります</p>
+              <img src="./images/works.jpg" alt="">
+            </div>
+          </div>
+          <div class="works-detail">
+            <h3>施策の成果</h3>
+            <div>
+              <p>ダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになります</p>
+              <img src="./images/works.jpg" alt="">
+            </div>
+          </div>
+          <div class="works-detail">
+            <h3>支援内容</h3>
+            <div>
+              <p>ダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになりますダミーテキストになります</p>
+              <img src="./images/works.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-4 bg-body">
+      <div class="footer-inner flex justify-between px-gutter-x">
+        <span class="text-white text-xs"> ©2025 Spark.inc </span>
+        <ul class="footer-icon flex items-center space-x-4">
+          <li class="w-[20px] h-[20px] flex items-center hover:opacity-70">
+            <a href="#">
+              <img
+                src="images/youtube.png"
+                alt="youtubeアイコン"
+                width="20"
+                height="20"
+              />
+            </a>
+          </li>
+          <li class="w-[16px] h-[16px] hover:opacity-70">
+            <a href="#">
+              <img
+                src="images/note.png"
+                alt="noteアイコン"
+                width="16"
+                height="16"
+              />
+            </a>
+          </li>
+          <li class="w-[16px] h-[16px] hover:opacity-70">
+            <a href="#">
+              <img
+                src="images/note.png"
+                alt="noteアイコン"
+                width="16"
+                height="16"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
